@@ -9,7 +9,6 @@ def instructions():
    print('Step4: call the play_again() method on your created instance to allow replay')
    print('Have fun ^^')
 
-
 # Creating TicTacToe Game:
 class TicTacToe():
 
@@ -76,7 +75,6 @@ class TicTacToe():
       self.refresh_screen()
       self.header()
       self.display_board()
-
       player = 'X'
       while self.end_conditions() == 'N':
          if player == 'X':
@@ -98,7 +96,6 @@ class TicTacToe():
          else:
             print('Its a draw!')
 
-
    def play_again(self):
       while True:
          replay = input('Do you want to play again? Y=Yes, N=No: ').upper()
@@ -110,7 +107,6 @@ class TicTacToe():
          else:
             print('Goodbye!')
             break
-
 
 #Enabling the code above as an module
 if __name__ == '__main__':
