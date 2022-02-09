@@ -1,5 +1,15 @@
 
 
+#Creating Instructions:
+def instructions():
+   print('Hey, hope you enjoy the game!')
+   print('Step1: import the tic_tac_toe module')
+   print('Step2: create an instance of TicTacToe() class')
+   print('Step3: call the start() method on your created instance to start the game')
+   print('Step4: call the play_again() method on your created instance to allow replay')
+   print('Have fun ^^')
+
+
 # Creating TicTacToe Game:
 class TicTacToe():
 
@@ -86,7 +96,7 @@ class TicTacToe():
          elif self.end_conditions() == 'O':
             print('O has won!')
          else:
-            print("It's a draw!")
+            print('Its a draw!')
 
 
    def play_again(self):
@@ -102,7 +112,11 @@ class TicTacToe():
             break
 
 
-#Playing TicTacToe Game:
-game = TicTacToe()
-game.start()
-game.play_again()
+#Enabling the code above as an module
+if __name__ == '__main__':
+   #Playing TicTacToe Game directly from file:
+   game = TicTacToe()
+   game.start()
+   game.play_again()
+else:
+   pass
