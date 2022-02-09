@@ -86,7 +86,7 @@ class TicTacToe():
          elif self.end_conditions() == 'O':
             print('O has won!')
          else:
-            print('Its a draw!')
+            print("It's a draw!")
 
 
    def play_again(self):
