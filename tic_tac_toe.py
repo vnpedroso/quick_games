@@ -18,7 +18,11 @@ class TicTacToe():
       self.tile = ['-']*10
 
    def header(self): 
-      print('Welcome to TicTacToe! \nOur keyboard simulates an standard calculator \nPlayer X starts!')
+      print('Welcome to TicTacToe! \nOur keyboard simulates an standard calculator: \n')
+      print(' 1',' 2',' 3 ',' ',' -'*3)
+      print(' 4',' 5',' 6 ','=',' -'*3)
+      print(' 7',' 8',' 9 ',' ',' -'*3)
+      print('\n Player X starts!')
 
    def refresh_screen(self):
       if platform.system == 'Windows':
