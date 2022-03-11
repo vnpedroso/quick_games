@@ -1,6 +1,8 @@
+#Importing required packages:
+import os
+import platform
 
-
-#Creating Instructions:
+#Creating instructions:
 def instructions():
    print('Hey, hope you enjoy the game!')
    print('Step1: import the tic_tac_toe module')
@@ -9,7 +11,7 @@ def instructions():
    print('Step4: call the play_again() method on your created instance to allow replay')
    print('Have fun ^^')
 
-# Creating TicTacToe Game:
+# Creating TicTacToe game:
 class TicTacToe():
 
    def __init__(self):
@@ -19,9 +21,11 @@ class TicTacToe():
       print('Welcome to TicTacToe! \nOur keyboard simulates an standard calculator \nPlayer X starts!')
 
    def refresh_screen(self):
-      import os 
-      os.system('cls')
-
+      if platform.system == 'Windows':
+         os.system('cls')
+      else:
+         os.system('clear')
+               
    def display_board(self):
       print(self.tile[1],self.tile[2],self.tile[3])
       print(self.tile[4],self.tile[5],self.tile[6])
@@ -111,8 +115,8 @@ class TicTacToe():
 #Enabling the code above as an module
 if __name__ == '__main__':
    #Playing TicTacToe Game directly from file:
-   game = TicTacToe()
-   game.start()
-   game.play_again()
-else:
-   pass
+   Game = TicTacToe()
+   Game.start()
+   Game.play_again()
+   
+   
