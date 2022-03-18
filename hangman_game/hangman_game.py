@@ -3,6 +3,7 @@ import os
 import platform
 import time
 import string
+import unidecode
 
 #Creating Instructions:
 def instructions():
@@ -36,10 +37,10 @@ class HangmanGame():
 
 	def get_word(self):
 		#OBS - you may need to import different alphabets or even add special characters to this standard english alphabet
-		alphabet = [x for x in string.ascii_lowercase]+['ç']
+		alphabet = [x for x in string.ascii_lowercase]
 		alphabet2 = alphabet+['-']
 		while True:
-			word = input('\nPlayer 1, please type your word to start the game: ').lower()
+			word = unidecode.unidecode(input('\nPlayer 1, please type your word to start the game: ').lower())
 			letters = [x for x in word]
 			if all(x in alphabet2 for x in letters):
 				self.secret_word += word
@@ -52,7 +53,6 @@ class HangmanGame():
 	def create_board(self):
 		size = len(self.get_word())
 		self.board = self.tile*size
-		[print(i,end=' ') for i in self.board]
 
 	def game_loop(self):
 		alphabet = [x for x in string.ascii_lowercase]+['ç']
