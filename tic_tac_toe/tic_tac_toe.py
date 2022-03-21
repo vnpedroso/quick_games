@@ -25,7 +25,7 @@ class TicTacToe():
       print('\n Player X starts!')
 
    def refresh_screen(self):
-      if platform.system == 'Windows':
+      if platform.system() == 'Windows':
          os.system('cls')
       else:
          os.system('clear')
